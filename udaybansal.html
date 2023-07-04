@@ -1,0 +1,265 @@
+<html>
+<head>
+	<title>calculator</title>
+<style>
+	.a
+	{
+		border:2px pink solid;
+		height: 600px;
+		width:400px;
+		background-color: grey;
+		border-radius: 40px 40px 40px 40px;
+	}
+	#c
+	{
+		border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		left: 20px;
+		top:200px;
+		font-size: 30pt;
+
+	}
+	#d{
+		border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:125px;
+		top: 200px;
+	}
+	#e{
+
+		border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:225px;
+		top: 200px;
+
+	}
+	#f
+	{
+
+
+		border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:325px;
+		top: 200px;
+	}
+	#g
+{
+		border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:20px;
+		top: 280px;	
+}
+#h{
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:125px;
+		top: 280px;
+}
+#i{
+
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:225px;
+		top: 280px;
+}
+#j{
+
+
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:325px;
+		top: 280px;
+}
+#k{
+
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:20px;
+		top: 360px;	
+}
+#l{
+
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:125px;
+		top: 360px;		
+}
+#m{
+
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:225px;
+		top: 360px;	
+}
+#n{
+
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:325px;
+		top: 360px;	
+}
+#o{
+
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:20px;
+		top: 440px;		
+}
+#p{
+
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:125px;
+		top: 440px;	
+}
+#Q{
+
+			border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:225px;
+		top: 440px;
+}
+#r{
+
+			border:2px pink solid;
+		height:155px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:325px;
+		top: 440px;	
+}
+#s{
+		border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:20px;
+		top: 520px;		
+}
+#t{
+	border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:125px;
+		top: 520px;			
+}
+#u{
+		border:2px pink solid;
+		height:75px;
+		width:75px;
+		position: absolute;
+		font-size: 30pt;
+		left:225px;
+		top: 520px;		
+}
+.screen{
+	position: absolute;
+	background-color: white;
+	top:40px;
+	left: 30px;
+	border:2px pink solid;
+	height:130px;
+	width: 350px;
+}
+body{
+	background-color: brown;
+}
+input{
+	font-size: 20pt;
+	height:130px;
+	width:350px;
+}
+.text{
+	position: absolute;
+	left:620px;
+	top:20px;
+	font-size: 35pt;
+	color: white;
+
+}
+</style>
+</head>
+<body>
+	<div class="a"><button class="button" id="c">C</button><button  class="button" id="d">/</button><button  class="button" id="e">*</button><button  class="button" id="f">w</button><br><button  class="button" id="g">7</button><button  class="button" id="h">8</button><button  class="button" id="i">9</button><button class="button" id="j">-</button><br>
+		<button  class="button" id="k">4</button><button  class="button" id="l">5</button><button  class="button" id="m">6</button><button  class="button" id="n">+</button>
+		<button  class="button" id="o">1</button><button  class="button" id="p">2</button><button  class="button" id="Q">3</button><button onclick="off()" class="button" id="r">=</button><button  class="button" id="s">%</button><button  class="button" id="t">0</button><button  class="button" id="u">.</button></div>
+	<div class="screen"><input type="text" name=""></div>
+<div class="text">Welcome To Calculator</div>
+	<script>
+		let string="";
+	let buttons = document.querySelectorAll('.button')
+	Array.from(buttons).forEach((button)=>{
+		button.addEventListener('click',(e)=>{
+if(e.target.innerHTML == '='){
+	string = eval(string);
+		document.querySelector('input').value = string;
+}
+else if(e.target.innerHTML == 'C'){
+	string = ""
+		document.querySelector('input').value = string;
+}
+else if(e.target.innerHTML == 'w'){
+	string = " ";
+		document.querySelector('input').value = string;
+}
+else{
+
+
+	
+	console.log(e.target);		
+	string = string + e.target.innerHTML;
+	document.querySelector('input').value = string;
+}
+		})
+	})
+	</script>
+</body>
+</html>
